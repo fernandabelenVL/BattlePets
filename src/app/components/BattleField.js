@@ -49,7 +49,7 @@ export default (props) => {
         <tr>
           <td>
             <div className='text-center'>
-              <h1>Game over</h1>
+              <h1>Fin del juego</h1>
               <StartButton onClick={() => onClick()}/>
             </div>
           </td>
