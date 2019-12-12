@@ -1,8 +1,5 @@
 import { shipTypes } from "../constants/constants";
 
-/*
-* Method generates battlefield with placed ships
-* */
 export const getBattleField = () => {
   let battleField = [10];
   for (let i = 0; i < 10; i++) {
@@ -17,14 +14,6 @@ export const getBattleField = () => {
   return battleField;
 };
 
-/*
-* Generates random ship positions
-*
-* @param1 initial ship
-* @param2 initial battlefield
-*
-* @returns updated battlefield
-* */
 const generateShipPositions = (ship, battleField) => {
   let shipStartPosition = null;
   let continueLoop = true;
@@ -54,15 +43,6 @@ const generateShipPositions = (ship, battleField) => {
   return battleField;
 };
 
-/*
-*  Method tries different direction of ship placement
-*    @param1 direction
-*    @param2 initialship
-*    @param3 start position
-*    @param4 initial battlefield
-*
-*    @returns new battlefield or null
-* */
 function tryDirections(direction, ship, shipStartPosition, battleField) {
   let x = shipStartPosition[0];
   let y = shipStartPosition[1];
@@ -134,16 +114,6 @@ function tryDirections(direction, ship, shipStartPosition, battleField) {
   }
 }
 
-/*
-*  Method marks neighbour cells of initial position on battlefield
-*
-*  @param1 initial battlefield
-*  @param2 x axis coordinate
-*  @param3 y axis coordinate
-*  @param4 initial ship id
-*
-*  @returns updated battleField
-* */
 const refillNeighbourCells = (battleField, x, y, shipId) => {
   if (y < 9 && battleField[x][y + 1] === null) {
     battleField[x][y + 1] = shipId;
@@ -172,23 +142,12 @@ const refillNeighbourCells = (battleField, x, y, shipId) => {
   return battleField;
 };
 
-/*
-*  Checks position
-*
-*  @param1 initial battlefield
-*  @param2 initial positin
-*
-*  @return true if position is free
-* */
 const positionIsFree = (battleField, position) => {
   let x = position[0];
   let y = position[1];
   return !(battleField[x][y] > 0);
 };
 
-/*
-* Returns random sequence of ship placing directions
-* */
 const getDirections = () => {
   let directions = [];
   for (let i = 0; directions.length < 4; i++) {
@@ -200,28 +159,15 @@ const getDirections = () => {
   return directions;
 };
 
-/*
-* Returns random coordinate
-* */
 const getRandomCoordinate = () => {
   const max = 9;
   return [Math.floor(Math.random() * max), Math.floor(Math.random() * max)]
 };
 
-/*
-* Returns random number in range from 0 to @param 'max'
-* */
 const getRandomNumber = (max) => {
   return Math.floor(Math.random() * max)
 };
 
-/*
-*  Makes clone of battleField
-*
-*  @param initial battleField
-*
-*  @returns clone of initial battleField
-* */
 export const makeClone = (battleField) => {
   let clone = [10];
   for (let i = 0; i < 10; i++) {

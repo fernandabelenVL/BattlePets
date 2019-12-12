@@ -47,7 +47,7 @@ const Navigation = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
+      <Navbar dark expand="md">
         <NavbarBrand href="/">Battlepet</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
