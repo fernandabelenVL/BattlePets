@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../assets/css/Home.css';
 import { Button, Container } from 'reactstrap';
+import { ToastsContainer, ToastsStore, ToastsContainerPosition} from 'react-toasts';
 
 class LoginScreen extends React.Component {
+
+
     
 onSubmit = () => {
    let newName = this.props.userName;
@@ -12,7 +15,9 @@ onSubmit = () => {
       this.props.history.push('/login');
    }
    
-   else { console.log("no hay nombre")
+   else { 
+      ToastsStore.error("Por favor ingresa un nombre")
+   // alert("por favor ingresa tu nombre :)")
    }
 }
 
@@ -20,6 +25,7 @@ handleUsername = (event) => {
    // console.log(event.target.name, event.target.value)
    this.props.setUserName(event.target.value);
 }
+
 
 render() {   
 	return (
@@ -37,6 +43,7 @@ render() {
                   />
                   </p>
                   <Button onClick={this.onSubmit}>Jugar</Button>
+                  <ToastsContainer store={ToastsStore} position={ToastsContainerPosition.BOTTOM_CENTER}/>
                <br></br>
             </Container>
          </div>
