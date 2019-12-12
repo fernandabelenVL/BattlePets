@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React  from 'react';
 import '../../assets/css/Home.css';
-import { Button, Container } from 'reactstrap';
+import { Container } from 'reactstrap';
 import { ToastsContainer, ToastsStore, ToastsContainerPosition} from 'react-toasts';
+
+import logo from '../../assets/img/logo-big.png';
 
 class LoginScreen extends React.Component {
 
-
-    
 onSubmit = () => {
    let newName = this.props.userName;
    console.log(newName);
@@ -14,37 +14,35 @@ onSubmit = () => {
    if (newName !== undefined) {
       this.props.history.push('/login');
    }
-   
    else { 
       ToastsStore.error("Por favor ingresa un nombre")
-   // alert("por favor ingresa tu nombre :)")
    }
 }
 
 handleUsername = (event) => {
-   // console.log(event.target.name, event.target.value)
    this.props.setUserName(event.target.value);
 }
-
 
 render() {   
 	return (
          <div>
             <Container>
-               <h1>¡Bienvenido a Battlepet! </h1>
-               <h2>Antes de empezar ingresa tu nombre</h2> 
-               {/* <p>Nombre de usuario: {userName}</p> */}
+               <div><img className="main-logo" src={logo} alt="Logo" /></div>
+               <p>¡Bienvenido!<br/>Para comenzar a jugar ingresa tu nombre</p> 
                   <p>
                   <input
                      type="text"
-                     placeholder="Ingresa tu nombre"
+                     placeholder="Escribe tu nombre aquí"
                      name="userName"
                      onChange={ this.handleUsername }
                   />
                   </p>
-                  <Button onClick={this.onSubmit}>Jugar</Button>
-                  <ToastsContainer store={ToastsStore} position={ToastsContainerPosition.BOTTOM_CENTER}/>
+                  <button className="btn primary-btn" onClick={this.onSubmit}>¡A jugar!</button>
+                  <ToastsContainer store={ToastsStore} position={ToastsContainerPosition.BOTTOM_CENTER} lightBackground/>
                <br></br>
+               <div className="hint-container">
+                  <p className="hint-text">¿No sabes cómo jugar?<br/><a href='/'>Ingresa aquí</a></p>               
+               </div>
             </Container>
          </div>
       );
