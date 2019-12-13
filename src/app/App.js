@@ -5,7 +5,6 @@ import '../assets/css/App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from './components/Home';
 import Login from './components/Login';
-import Help from './components/Help';
 import Navigation from './components/Navigation';
 
 import ComputerBoard from './components/ComputerBoard';
@@ -25,7 +24,6 @@ function App() {
      <Switch>
        <Route exact path="/" render = { (props) => <Home {...props} userName={userName} setUserName={setUserName}/> } />
        <Route path="/login" render = { (props) => <Login {...props} userName={userName} setUserName={setUserName}/> } />
-       <Route path="/help" component = { Help } />
        <Route path="/computerboard" render = { (props) => <ComputerBoard {...props} userName={userName}/> } />
      </Switch>
    </Router>

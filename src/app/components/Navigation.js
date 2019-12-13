@@ -72,14 +72,24 @@ const Navigation = (props) => {
             ref={descriptionElementRef}
             tabIndex={-1}
           >
-            {[...new Array(50)]
-              .map(
-                () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-              )
-              .join('\n')}
+          Las mascotas son parte de nuestra familia, son compañeros, amigos y protectores
+y en Battlepet no es diferente, por eso debes ayudar a tu perrito a proteger tu casita.
+<br/><br/>Hay otras mascotas y animalitos que quieren entrar por lo que debes descubrir cuáles son posiciones dentro del tablero para poder espantarlos ¡ Tu y tu mascota serán el mejor equipo !
+<br/><br/>
+<strong>¿Cómo jugar?</strong>
+<br/><br/>
+1.  Ingresa tu nombre o el de tu mascota para poder jugar.
+<br/><br/>2. Selecciona el modo de juego:
+<br/><strong>-  Juego rápido:</strong> juega contra la computadora.
+<br/><strong>- Juega con un amigo: </strong>invita a un amigo a jugar contigo a través de un código QR o un link de invitación que los ubicarán en la misma sala para jugar.
+<br/><strong>- Juego Online: </strong>juega con una persona aleatoria que esté conectada en cualquier parte del mundo.
+
+<br/><br/>3. Al entrar en la sala debes seleccionar las posiciones en que tu mascota y tú defenderán su casa, una vez listo presiona “Comenzar a Jugar”
+<br/><br/>4. El juego es por turnos, por lo que verás tu tablero mientras el otro jugador te “ataca” y verás el tablero de tu oponente para descubrir sus posiciones y atacarlo.
+<br/><br/>5. El primero en descubrir todas las posiciones del otro dentro del tablero de juego ¡Gana!
+<br/><br/>
+¡Mucha suerte y a divertirse!
+
           </DialogContentText>
         </DialogContent>
         <DialogActions>
