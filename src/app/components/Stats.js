@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React  from 'react';
 import { Col, Row } from 'react-bootstrap';
 import Flotilla from './../components/Flotilla';
 import Scores from "./../components/Scores";
@@ -6,7 +6,7 @@ import Scores from "./../components/Scores";
 export default (props) => {
   const { flotilla, hits, shots } = props;
   return (
-    <Col lg={2} lgOffset={2} md={3} mdOffset={2} sm={12} xs={12}>
+    <Col lg={2} lgoffset={2} md={3} mdoffset={2} sm={12} xs={12}>
       <Row>
         <div className='scoresPanel'>
           <Col md={12} sm={4} xs={12}>

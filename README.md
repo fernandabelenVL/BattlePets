@@ -1,4 +1,6 @@
-# Battleship
+
+# Battlepet
+<img src="./src/assets/img/promo-banner.png " width="100%"/> 
 
 ## Índice
 
@@ -10,12 +12,11 @@
 * [6. Benchmark](#6-benchmark)
 * [7. Historias de Usuario](#7-historias-de-usuario)
 * [8. Diagrama de Flujo](#8-diagrama-de-flujo)
-<!-- * [9. Prototipado](#9-prototipado)
-* [10. Look & Feel](#10-look-&-feel) -->
+* [9. Prototipado](#9-prototipado)
+* [10. Look & Feel](#10-look-&-feel)
+
 
 ## 1. Preámbulo
-
-<!-- <img src=" " width="100%"/> -->
 
 Los videojuegos son una verdadera prueba cuando se trata de tecnología. Uno de los factores de éxito para el equipo de android, por ejemplo, fue que pudiesen tener un juego corriendo en los primeros teléfonos. La idea era que si un juego podía ejecutarse en la plataforma, un programa más simple con pantallas mucho más fáciles de trabajar que solo tuviese botones y texto debería funcionar aun mejor.
 
@@ -118,53 +119,72 @@ Según esto último concluimos que la para la construcción de nuestro juego, la
 
 ## 7. Historias de Usuario
 
-1. Como usuario jugador de battleship me gusta poder ingresar mi nombre.
+1. Como usuario jugador de Battlepet me gusta poder ingresar mi nombre.
 
 _Criterios de consideración:_
+La pantalla de bienvenida debe contener un input en donde el usuario ingrese su nombre. Dicho valor debe guardarse por medio de props para utilizarse en las siguientes pantallas interiores
 
-2. Como usuario jugador de battleship me gustaría elegir un identificador (color, avatar, etc.)
-
-_Criterios de consideración:_
-
-3. Como usuario jugador de battleship me gustaría poder invitar a un amigo a jugar conmigo.
+2. Como usuario jugador de Battlepet me gustaría elegir un identificador (color, avatar, etc.)
 
 _Criterios de consideración:_
+En la siguiente pantalla después de ingresar su nombre, el usuario puede elegir una foto o avatar dentro de su galería de teléfono para continuar con la navegación del juego.
 
-4. Como usuario jugador de battleship me gustaría poder tener la opción de  invitar a un amigo o jugar contra la computadora.
 
-_Criterios de consideración:_
-
-5. Como usuario jugador de battleship me gustaría poder elegir las casillas donde que quiero que vayan mis “barcos”.
+3. Como usuario jugador de Battlepet me gustaría poder invitar a un amigo a jugar conmigo.
 
 _Criterios de consideración:_
+Al seleccionar el modo de juego con un amigo se desplegará la opción de "compartir a través de código QR" o "compartir invitación" que se dará a través de un link que conectará con la sesión de juego en cuestión (sala de juego).
 
-6. Como usuario jugador de battleship me gustaría poder clickear las cuadrados del tablero para jugar.
 
-_Criterios de consideración:_
-
-7. Como usuario jugador de battleship me gustaría poder visualizar los "barcos" que me quedan por derribar de mi oponente.
+4. Como usuario jugador de Battlepet me gustaría poder tener la opción de invitar a un amigo o jugar contra la computadora.
 
 _Criterios de consideración:_
+Después de la pantalla de inicio, el usuario tendrá varias opciones de juego que serán:
+- Jugar contra la computadora.
+- Invitar a un amigo a jugar
+- Jugar Online
 
-8. Como usuario jugador de battleship me gustaría poder ver en tiempo real si la casilla seleccionada derribó o no el "barco" de mi oponente.
-
-_Criterios de consideración:_
-
-9. Como usuario jugador de battleship me gustaría poder elegir el nivel dificultad de juego que quiero (número de casillas 5x5, 8x8, 10x10, 12x12).
-
-_Criterios de consideración:_
-
-10. Como usuario jugador de battleship me gustaría poder tener una pantalla de resultados al terminar el juego (ganador-perdedor).
+5. Como usuario jugador de Battlepet me gustaría poder elegir las casillas donde que quiero que vayan mis “barcos”.
 
 _Criterios de consideración:_
+Después de seleccionar el modo de juego, se procederá a seleccionar las piezas de juego dentro de un tablero 10x10, el cual podrá elegir e intercambiar el sentido de piezas entre horizontales o verticales: 1 de 5 casillas, 1 de 4 casillas, 2 de 3 casillas y 1 de 2 casillas.
 
-11. Como usuario jugador de battleship me gustaría poder volver al inicio para comenzar un nuevo juego.
-
-_Criterios de consideración:_
-
-12. Como usuario jugador de battleship me gustaría poder abandonar el juego en caso de que lo necesite.
+6. Como usuario jugador de Battlepet me gustaría poder clickear las cuadrados del tablero para jugar.
 
 _Criterios de consideración:_
+Para seleccionar las posiciones de mis fichas dentro del tablero puedo hacer click en la pantalla para seleccionar la posición directamente (método onPress)
+
+7. Como usuario jugador de Battlepet me gustaría poder visualizar los "barcos" que me quedan por derribar de mi oponente.
+
+_Criterios de consideración:_
+Se considera una visualización por turnos, en primer lugar veo el tablero de mi enemigo para atacar, posteriormente cuando sea su turno vero mi tablero y la posición en que mi contrincante ha atacado (cambio de estados).
+
+8. Como usuario jugador de Battlepet me gustaría poder ver en tiempo real si la casilla seleccionada derribó o no el "barco" de mi oponente.
+
+_Criterios de consideración:_
+Al ver mi tablero, conectado a través de Firebase, se visualiza en tiempo real el movimiento o acción de mi oponente en mi tablero. Se visualiza un cambio de estado cuando mi contrincante presiona sobre una casillas de mi tablero y viceversa.
+
+9. Como usuario jugador de Battlepet me gustaría poder elegir el nivel dificultad de juego que quiero (número de casillas 5x5, 8x8, 10x10, 12x12).
+
+_Criterios de consideración:_
+Iteración: antes de seleccionar un modo de juego, se selecciona el nivel de dificultad con el que se quiera jugar a través de un selector que contiene la condición de construcción del componente "Board".
+
+10. Como usuario jugador de Battlepet me gustaría poder tener una pantalla de resultados al terminar el juego (ganador-perdedor).
+
+_Criterios de consideración:_
+Al completar todas las casillas, ya sea en mi juego o en el del oponente se despliega la notificación de resultados, en donde se muestra quién es el ganador y quién es el perdedor.
+
+11. Como usuario jugador de Battlepet me gustaría poder volver al inicio para comenzar un nuevo juego.
+
+_Criterios de consideración:_
+Posterior al término del juego se despliega la opción (botón) de "volver a jugar" con el mismo oponente independiente del tipo de juego o volver al inicio, que me llevará nuevamente a la selección de juego.
+
+12. Como usuario jugador de Battlepet me gustaría poder abandonar el juego en caso de que lo necesite.
+
+_Criterios de consideración:_
+Dentro de las opciones principales, o barra de navegación debe encontrarse un botón que permita volver al inicio y/o abandonar la partida en medio de un juego en proceso. 
+Si el usuario abandona un juego en línea, al oponente se le notifica ésta acción a través de un mensaje pop-up "tu oponente ha abandonado la partida".
+
 
 <br>
 
@@ -175,16 +195,20 @@ _Criterios de consideración:_
 <br/>
 <br/>
 
-<!-- ## 9. Prototipado
+## 9. Prototipado
 
-* Sketch
-* Wireframe
+<img src="./src/assets/img/wireframe.png " width="100%"/> 
+
 
 <br>
 
 ## 10. Look & Feel
 
-<br> -->
+
+<img src="./src/assets/img/look-and-feel.png " width="100%"/> 
+
+<br>
+
 
 ## Links de Interés
 

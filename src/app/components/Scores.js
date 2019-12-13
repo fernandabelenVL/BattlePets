@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 export default (props) => {
   const { hits, shots } = props;
@@ -7,12 +7,12 @@ export default (props) => {
       <div className='scoreHits'>
         <h2 className='scores'>{hits}</h2>
         <hr/>
-        <p className='scoreText'>Hits</p>
+        <p className='scoreText'>Aciertos</p>
       </div>
       <div className='scoreShots'>
         <h2 className='scores'>{shots}</h2>
         <hr/>
-        <p className='scoreText'>Shots</p>
+        <p className='scoreText'>Intentos</p>
       </div>
     </div>
   )
