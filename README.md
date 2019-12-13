@@ -1,3 +1,4 @@
+
 # Battlepet
 <img src="./src/assets/img/promo-banner.png " width="100%"/> 
 
@@ -13,7 +14,6 @@
 * [8. Diagrama de Flujo](#8-diagrama-de-flujo)
 * [9. Prototipado](#9-prototipado)
 * [10. Look & Feel](#10-look-&-feel)
-
 
 
 ## 1. Preámbulo
@@ -185,6 +185,7 @@ _Criterios de consideración:_
 Dentro de las opciones principales, o barra de navegación debe encontrarse un botón que permita volver al inicio y/o abandonar la partida en medio de un juego en proceso. 
 Si el usuario abandona un juego en línea, al oponente se le notifica ésta acción a través de un mensaje pop-up "tu oponente ha abandonado la partida".
 
+
 <br>
 
 ## 8. Diagrama de Flujo
@@ -198,13 +199,16 @@ Si el usuario abandona un juego en línea, al oponente se le notifica ésta acci
 
 <img src="./src/assets/img/wireframe.png " width="100%"/> 
 
+
 <br>
 
 ## 10. Look & Feel
 
+
 <img src="./src/assets/img/look-and-feel.png " width="100%"/> 
 
 <br>
+
 
 ## Links de Interés
 
