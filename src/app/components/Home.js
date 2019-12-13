@@ -8,8 +8,7 @@ import logo from '../../assets/img/logo-big.png';
 class LoginScreen extends React.Component {
 
 onSubmit = () => {
-   let newName = this.props.userName;
-   console.log(newName);
+   var newName = this.props.userName;
    
    if (newName !== undefined) {
       this.props.history.push('/login');
@@ -20,7 +19,7 @@ onSubmit = () => {
 }
 
 handleUsername = (event) => {
-   this.props.setUserName(event.target.value);
+   this.props.setUserName(event.target.value.toUpperCase());
 }
 
 render() {   
@@ -34,10 +33,10 @@ render() {
                      type="text"
                      placeholder="Escribe tu nombre aquí"
                      name="userName"
-                     onChange={ this.handleUsername }
+                     onChange={ this.handleUsername}
                   />
                   </p>
-                  <button className="btn primary-btn" onClick={this.onSubmit}>¡A jugar!</button>
+                  <button className="btn btn-primary one-edge-shadow" onClick={this.onSubmit}>¡A JUGAR!</button>
                   <ToastsContainer store={ToastsStore} position={ToastsContainerPosition.BOTTOM_CENTER} lightBackground/>
                <br></br>
                <div className="hint-container">

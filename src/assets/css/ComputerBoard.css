@@ -62,8 +62,8 @@ h1 {
     }
 
     .battleFieldPanel {
-        padding-top: 20px;
-        background-color: #dee2e6;
+        padding-top: 10px 0;
+        margin-top: 10px;
     }
 
     .scoresPanel {
@@ -116,6 +116,7 @@ h1 {
     .scoreText {
         margin-top: 5px;
         margin-bottom: 8px;
+        color: #fff;
     }
 
     .shipItem {
@@ -138,7 +139,8 @@ h1 {
     .flotillaContainer {
         overflow: auto;
         width: auto;
-        max-height: 140px;
+        max-height: 150px;
+        margin-top: 10px;
     }
 }
 
@@ -154,7 +156,7 @@ h1 {
     }
 
     .battleFieldPanel {
-        padding-top: 20px;
+        padding-top: 10px !important;
         background-color: white;
     }
 
@@ -395,24 +397,32 @@ h1 {
 }
 
 .scoreHits {
-    background-color: #ff898b;
-    width: 50%;
+    background-color: #46B3FF;
+    width: 45%;
     float: left;
+    border-radius: 20px;
+    padding: 10px;
+    margin-right: 5px;
 }
 
 .scoreShots {
-    background-color: #96edfa;;
-    width: 50%;
+    background-color: #E23976;
+    width: 45%;
     float: left;
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 5px;
 }
 
 .scores {
-    color: #595959;
+    color: #fff;
 }
 
 .scorePanel {
     display: inline-block;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 p {

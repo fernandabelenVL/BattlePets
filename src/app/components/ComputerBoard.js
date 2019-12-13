@@ -1,13 +1,13 @@
 import _ from 'lodash'
 import React, { Component } from 'react';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import '../../assets/css/ComputerBoard.css';
 import BattleField from './BattleField.js';
 import Stats from "./Stats";
 import { shipTypes } from '../constants/constants';
 import { getBattleField, makeClone } from '/Users/fernanda/Desktop/LABORATORIA/BattlePets/src/app/helpers/generateBattleField.js';
 import { getMaxHits } from '/Users/fernanda/Desktop/LABORATORIA/BattlePets/src/app/helpers/getMaxHits.js';
+import { Grid } from '@material-ui/core';
 
 class ComputerBoard extends Component {
   constructor(props) {
@@ -141,15 +141,15 @@ class ComputerBoard extends Component {
 
     return (
       <div className='main-content'>
-      <button onClick={this.reloadGame}>Reiniciar Juego</button>
+      {/* <button className="btn btn-reload" onClick={this.reloadGame}>Reiniciar Juego</button> */}
 
-        <Col>
+        <Grid>
           {
             screenMode === 'desktop'
               ? <Row className='show-grid'>{statsPanel}{battleFieldPanel}</Row>
               : <Row className='show-grid'>{battleFieldPanel}{statsPanel}</Row>
           }
-        </Col>
+        </Grid>
       </div>
     );
   }

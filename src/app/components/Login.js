@@ -9,15 +9,17 @@ class LoginScreen extends React.Component {
 	return (
         <div className="Login">         
         <Container className="home-content">
-	         <h1 className="Title">Bienvenido</h1>
-				<h2 className="userName">{this.props.userName}</h2>
+	         <h1 className="Title">¡Hola!</h1>
+				<p className="user-name">{this.props.userName}</p>
                <div className= "btnLogin">
                   {/* <Link to="/home"> <Button>Invita a un amigo a jugar</Button></Link>
    					<Link to="/home"><Button>Jugar online</Button></Link><br></br> */}
-   					<Link to="/computerboard"> <Button>Jugar contra la computadora</Button></Link><br></br>
-                  <Button href="/">Volver al Inicio</Button>
-				</div>	 
-                </Container>       				
+   					<Link to="/computerboard"> <button className="btn one-edge-shadow btn-secondary">JUEGO RÁPIDO</button></Link>
+                  <button disabled className="btn one-edge-shadow btn-primary">JUEGA CON UN AMIGO</button>
+   					<button disabled className="btn one-edge-shadow btn-tertiary">JUEGA ONLINE</button>
+                  <Button href="/" className="btn one-edge-shadow outline-btn">Volver atrás</Button>
+				   </div>	 
+         </Container>       				
          </div>
       );
    }

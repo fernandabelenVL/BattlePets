@@ -8,12 +8,12 @@ export default (props) => {
   let hitCounter = [];
   for (let i = 0; i < hitPoints; i++) {
     hitPointsCounter.push(
-      (<span key={i}><img src={missSmall} className='hitPointMark'/></span>)
+      (<span key={i}><img src={missSmall} className='hitPointMark' alt="miss small"/></span>)
     )
   }
   for (let j = 0; j < hits; j++) {
     hitCounter.push(
-      (<span key={j}><img src={hitSmall} className='hitPointMark'/></span>)
+      (<span key={j}><img src={hitSmall} className='hitPointMark' alt="hit small"/></span>)
     )
   }
   return (

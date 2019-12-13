@@ -1,22 +1,32 @@
-html {
-  height: 100%;
-  
-}
 body {
   background-color: #EFEFEF !important;
-  min-height: 100%;
-  display: flex;
+  /* min-height: 100%; */
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   background-image: url("../img/main-bg@2x.png");
   background-size: cover;
 }
 
 .App {
-  min-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 100%; 
+}
+
+.row {
+margin-right: 0 !important;
+margin-left: 0 !important;
+justify-content: center;
+}
+
+hr {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  border-top: 1px solid #f8f9fa;
+}
+
+.col, .col-12 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 
 h1, h2, h3, h4, h5, p {
@@ -24,7 +34,8 @@ h1, h2, h3, h4, h5, p {
 }
 
 h1 {
-  color: #565657;
+  color: #565657 !important;
+  font-size: 30px !important;
 }
 
 p {
@@ -32,12 +43,13 @@ font-size: 17px;
 font-weight: 200;
 }
 
+
 .navbar {
-  position: fixed !important;
+  /* position: fixed !important; */
   left: 0;
   top: 0;
   width: 100%;
-  background-color: #4D7EA0;
+  background-color: #0c73bb;
   z-index: 99;
 }
 
@@ -48,18 +60,60 @@ font-weight: 200;
 
 .btn {
 width: 80%;
-padding: 10px !important;
+padding: 13px !important;
 margin-bottom: 10px;
 font-family: 'Baloo Bhai', cursive;
-letter-spacing: 0.5px
+letter-spacing: 0.5px;
+border-radius: 10px !important;
 
 }
 
-.primary-btn {
- background-color: #568FB7 !important;
+.btn-primary {
+ background-color: #57B0EF !important;
  color: white !important;
-}
+ border-color: #57B0EF !important;
 
-.primary-btn:hover {
+}
+.btn-primary:hover {
   background-color: #476E89 !important;
  }
+ 
+.btn-secondary {
+  background-color: #E23976 !important;
+  color: white !important;
+  border-color: #E23976 !important;
+}
+.btn-secondary:hover {
+  background-color: #b53261 !important;
+  border-color: #b53261!important;
+}
+
+.btn-tertiary {
+  background-color: #2CBBD5 !important;
+  color: white !important;
+  border-color: #2CBBD5 !important;
+}
+
+.btn-tertiary:hover {
+  background-color: #2CBBD5 !important;
+}
+
+
+.outline-btn {
+  color: #6c757d !important;
+  background-color: transparent !important;
+  border-color: #6c757d !important;
+}
+
+.outline-btn:hover {
+  color: #6c757d !important;
+  background-color: white !important;
+  border-color: #6c757d !important;
+}
+
+
+ .one-edge-shadow {
+	-webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
+	   -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
+	        box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
+}
