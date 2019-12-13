@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/battlepets/static/css/main.bf3806b0.chunk.css",
+    "main.js": "/battlepets/static/js/main.51a4120d.chunk.js",
+    "main.js.map": "/battlepets/static/js/main.51a4120d.chunk.js.map",
+    "runtime-main.js": "/battlepets/static/js/runtime-main.9358e165.js",
+    "runtime-main.js.map": "/battlepets/static/js/runtime-main.9358e165.js.map",
+    "static/css/2.17e5ed98.chunk.css": "/battlepets/static/css/2.17e5ed98.chunk.css",
+    "static/js/2.dfb5257d.chunk.js": "/battlepets/static/js/2.dfb5257d.chunk.js",
+    "static/js/2.dfb5257d.chunk.js.map": "/battlepets/static/js/2.dfb5257d.chunk.js.map",
+    "index.html": "/battlepets/index.html",
+    "precache-manifest.2ffdbfff9d99117faa287dc102716dd9.js": "/battlepets/precache-manifest.2ffdbfff9d99117faa287dc102716dd9.js",
+    "service-worker.js": "/battlepets/service-worker.js",
+    "static/css/2.17e5ed98.chunk.css.map": "/battlepets/static/css/2.17e5ed98.chunk.css.map",
+    "static/css/main.bf3806b0.chunk.css.map": "/battlepets/static/css/main.bf3806b0.chunk.css.map",
+    "static/js/2.dfb5257d.chunk.js.LICENSE": "/battlepets/static/js/2.dfb5257d.chunk.js.LICENSE",
+    "static/media/dog1.png": "/battlepets/static/media/dog1.0268347e.png",
+    "static/media/dog3.png": "/battlepets/static/media/dog3.636d8931.png",
+    "static/media/dog4.png": "/battlepets/static/media/dog4.6d1b994c.png",
+    "static/media/logo-big.png": "/battlepets/static/media/logo-big.7cf3bde5.png",
+    "static/media/App.css": "/battlepets/static/media/main-bg@2x.943715d8.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9358e165.js",
+    "static/css/2.17e5ed98.chunk.css",
+    "static/js/2.dfb5257d.chunk.js",
+    "static/css/main.bf3806b0.chunk.css",
+    "static/js/main.51a4120d.chunk.js"
+  ]
+}
